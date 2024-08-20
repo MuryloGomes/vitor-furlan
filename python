@@ -1,0 +1,53 @@
+# %%
+import random
+
+# %%
+def gerar_cpf():
+
+    return "".join([str(random.randint(0, 9)) for _ in range(9)])
+
+def gerar_subconjunto(conjunto):
+
+    return set(random.sample(list(conjunto), int(random.random() * 100)))
+
+# %%
+cpf_gerado = set()
+
+quantidade = 100
+
+for _ in range(quantidade):
+    cpf = gerar_cpf()
+    cpf_gerado.add(cpf)
+
+# %% 
+surf = gerar_subconjunto(cpf_gerado)
+volei = gerar_subconjunto(cpf_gerado)
+judo = gerar_subconjunto(cpf_gerado)
+ginastica = gerar_subconjunto(cpf_gerado)
+
+# %%
+esportes = {}
+
+esportes["surf"] = surf # cria novo item
+esportes["volei"] = volei # cria novo item
+esportes["judo"] = judo # cria novo item
+esportes["ginastica"] = ginastica # cria novo item
+
+# %%
+for k, v in esportes.items():
+    print(k, v) # exibe as chaves e valores
+# %%
+for k in esportes:
+
+    print(k) # exibe todas as chaves
+
+    print(esportes[k]) # os valores associados às chaves
+
+# %%
+interscao = (surf & ginastica) 
+print(interscao)
+# %%
+numero_de_elementos = len(interscao)
+
+print(f"O número de elementos no conjunto dinâmico é: {numero_de_elementos}")
+
