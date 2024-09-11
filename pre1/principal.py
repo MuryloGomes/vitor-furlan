@@ -1,6 +1,7 @@
+#%%
 from cliente import Cliente
 from pix import Pix
-
+#%%
 # Programa principal
 cliente1 = Cliente("Maria", "123.456.789-00", 1000.0)
 cliente2 = Cliente("João", "987.654.321-00", 500.0)
@@ -42,3 +43,4 @@ for pix in extrato_c2:
 
 cliente2.realizar_pix(9000.0, cliente1)
 # Saldo insuficiente para realizar a transferência.
+# %%

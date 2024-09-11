@@ -1,9 +1,10 @@
+#%%
 from pix import Pix
-
+#%%
 class Cliente:
-    def __init__(self, nome: str, extrato: list[Pix], cpf: str, saldo: float):
+    def __init__(self, nome: str, cpf: str, saldo: float):
         self.nome = nome
-        self.__extrato = [extrato]
+        self.__extrato = []
         self.__cpf = cpf
         self.__saldo = saldo
     
@@ -33,6 +34,7 @@ class Cliente:
             destinatario.registrar_transacao(transacao)
         else:
             print("Saldo insuficiente para realizar a transferência.")
-
+            
     def registrar_transacao(self, transacao):
         self.__extrato.append(transacao)
+# %%
