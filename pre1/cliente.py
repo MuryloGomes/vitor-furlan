@@ -1,4 +1,3 @@
-#%%
 from pix import Pix
 #%%
 class Cliente:

@@ -1,8 +1,6 @@
 #%%
-from cliente import Cliente
-#%%
 class Pix:
-    def __init__(self, remetente: Cliente, destinatario: Cliente, valor: float):
+    def __init__(self, remetente, destinatario, valor: float):
         self.__remetente = remetente
         self.__destinatario = destinatario
         self.__valor = valor
